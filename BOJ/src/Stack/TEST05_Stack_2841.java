@@ -13,7 +13,7 @@ public class TEST05_Stack_2841 {
 		StringTokenizer stk = new StringTokenizer(br.readLine());
 		int N = Integer.valueOf(stk.nextToken());
 		int P = Integer.valueOf(stk.nextToken());
-		Stack<Integer>[] stack = new Stack[7];
+		Stack<Integer>[] stack = new Stack[7];//스택을 배열로 선언, 크기를 7로 선언한 이유는 줄의 번호와 스택의 번호를 맞추기 위함.
 		
 		for(int i = 1; i < 7; i++) {
 			stack[i] = new Stack<Integer>();

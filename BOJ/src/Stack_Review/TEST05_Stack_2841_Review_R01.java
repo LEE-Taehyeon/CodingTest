@@ -18,7 +18,7 @@ public class TEST05_Stack_2841_Review_R01 {
 		Stack<Integer> stk3 = new Stack<Integer>();
 		Stack<Integer> stk4 = new Stack<Integer>();
 		Stack<Integer> stk5 = new Stack<Integer>();
-		Stack<Integer> stk6 = new Stack<Integer>();
+		Stack<Integer> stk6 = new Stack<Integer>();//줄에 따라 스택을 별도로 6개 선언
 		int cnt = 0;
 
 		for (int i = 0; i < N; i++) {
@@ -26,16 +26,17 @@ public class TEST05_Stack_2841_Review_R01 {
 			int n = Integer.valueOf(stk.nextToken());
 			int p = Integer.valueOf(stk.nextToken());
 
-			switch (n) {
+			switch (n) {//해당 줄을 구분짓기 위해 switch문을 사용
 			case 1: {
-				while (!stk1.isEmpty() && stk1.peek() > p) {
+				while (!stk1.isEmpty() && stk1.peek() > p) {//스택이 비어있지 않고, 이전 값이 현재 값보다 크면 이전 값을 꺼내 삭제한다.
+															//whlie문으로 작성한 이유는 이전 값을 삭제해도 계속해서 현재 값보다 클 수 있으므로 작을 때까지 원소를 삭제하기 위함.
 					cnt++;
 					stk1.pop();
 				}
-				if(!stk1.isEmpty() && stk1.peek()==p) {
+				if(!stk1.isEmpty() && stk1.peek()==p) {//만약 이전 값과 현재 값이 같다면 아무 조치도 취하지 않고  break문을 통해 빠져나간다.
 					break;
 				}
-				stk1.push(p);
+				stk1.push(p);//이전 값보다 현재값이 클 경우를 의미. 스택에 현재 값을 넣는다.
 				cnt++;
 				break;
 
