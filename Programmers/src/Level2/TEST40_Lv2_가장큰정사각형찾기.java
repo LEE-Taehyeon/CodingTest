@@ -4,7 +4,7 @@ package Level2;
 public class TEST40_Lv2_가장큰정사각형찾기 {
 	public static void main(String[] args) {
 		int[][] board = { {0,1,1,1},
-						  {1,0,1,1},
+						  {1,1,1,1},
 						  {1,1,1,1},
 						  {0,0,1,0} };
 		
