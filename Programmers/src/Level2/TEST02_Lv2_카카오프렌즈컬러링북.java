@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Queue;
 
 //백준(Lv2)_카카오프렌즈컬러링북
-public class TEST39_Lv2_카카오프렌즈컬러링북 {
+public class TEST02_Lv2_카카오프렌즈컬러링북 {
 	static int r;
 	static int c;
 	static int[] dx = { 1, 0, -1, 0 };

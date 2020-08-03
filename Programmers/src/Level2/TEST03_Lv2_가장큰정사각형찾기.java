@@ -1,7 +1,7 @@
 package Level2;
 
 //프로그래머스(Lv2)_가장 큰 정삭각형 찾기 -> 처음에 BFS로 풀려고했는데 이 문제는 DP를 이용하여 풀어야 하는 문제였다.
-public class TEST40_Lv2_가장큰정사각형찾기 {
+public class TEST03_Lv2_가장큰정사각형찾기 {
 	public static void main(String[] args) {
 		int[][] board = { {0,1,1,1},
 						  {1,1,1,1},

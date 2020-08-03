@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //프로그래머스(Lv2)_소수찾기
-public class TEST38_Lv2_소수찾기 {
+public class TEST01_Lv2_소수찾기 {
 	static String[] SEL;
 	static int MINORITY = 0;
 	static Map<Integer, Integer> map = new HashMap<Integer, Integer>();
