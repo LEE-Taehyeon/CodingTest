@@ -41,7 +41,7 @@ public class Permutation_notOrder {
 		
 	}
 	
-	private static void overlapPermutation(int[] arr, int depth) {
+	private static void overlapPermutation(int[] arr, int depth) {//사전순으로 출력 가능
 		if(depth==sel.length) {
 			System.out.println(Arrays.toString(sel)); // nPr 중복O
 			return;

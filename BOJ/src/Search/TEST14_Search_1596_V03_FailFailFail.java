@@ -16,7 +16,7 @@ public class TEST14_Search_1596_V03_FailFailFail {
 		
 		for(double i=a;i<=b;i++) {
 			if(isLuckyNum(i)) {
-				System.out.println(i);
+				//System.out.println(i);
 				answer++;
 			}
 		}
