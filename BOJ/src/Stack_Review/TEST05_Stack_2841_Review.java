@@ -7,7 +7,7 @@ import java.util.Stack;
 import java.util.StringTokenizer;
 
 //백준(2841)_외계인의 기타연주
-public class TEST05_Stack_2841_Review_R01 {
+public class TEST05_Stack_2841_Review {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer stk = new StringTokenizer(br.readLine());
