@@ -42,7 +42,7 @@ public class TEST05_Lv2_2017_카카오본선_단체사진찍기_FailFailFail {
 		for(int i=0;i<n;i++) {
 			char[] condition = data[i].toCharArray();//조건을 배열로 선언
 			int from = 0;
-			int to = 0;//from과 to는 조건에 해당하는 캐릭터
+			int to = 0;//from과 to는 조건에 해당하는 캐릭터 위치를 구하기 위한 변수
 			int cond = condition[4] - '0';//조건에 떨어진 만큼의 거리
 			
 			for(int j=0;j<8;j++) {//한 줄로 세운 8명 중 조건에 맞는 두 캐릭터의 위치 구하기
