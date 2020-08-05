@@ -42,16 +42,16 @@ public class TEST06_Lv2_2018_KAKAO_BLIND_3차파일명정렬_V02 {
 				for(int i=0;i<str.length();i++) {
 					char ch = str.charAt(i);
 					
-					if(ch>='0' && ch<='9') {
-						if(beginIndex>i) {
+					if(ch>='0' && ch<='9') {//문자열의 탐색하는데 해당 문자가 숫자이면 if문 안을 수행
+						if(beginIndex>i) {//최초의 숫자가 나타날 때의 index값을 저장하기 위한 조건
 							beginIndex = i;
 						}
-						if(endIndex<i) {
+						if(endIndex<i) {//마지막 숫자가 나타날 때의 index값을 저장하기 위한 조건
 							endIndex = i;
 						}
-					}else if(endIndex!=0 && !(ch>='0' && ch<='9')) {//해당 코드를 넣어주므로서 해결
+					}else if(endIndex!=0 && !(ch>='0' && ch<='9')) {//endIndex가 0이 아니고(즉, 이전에 숫자가 나타났고) 이후 문자가 숫자가 아니면 break; -> 조건에 맞는모든 숫자탐색
 						break;
-					}
+					}//위의 else if문이 없으면 foo010bar020.zip 과 같은 문자열이 들어왔을 경우, 010bar020까지 number로 취급한다. 
 				}
 				
 				String[] file = {str.substring(0, beginIndex).toUpperCase(), str.substring(beginIndex, endIndex+1), str.substring(endIndex+1)};
