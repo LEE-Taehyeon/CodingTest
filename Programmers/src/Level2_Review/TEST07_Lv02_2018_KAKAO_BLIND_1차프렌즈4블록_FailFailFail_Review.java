@@ -1,6 +1,6 @@
 package Level2_Review;
 
-public class TEST07_Lv02_2018_KAKAO_BLIND_1차프렌즈4블록_FailFailFail_Review_R01 {
+public class TEST07_Lv02_2018_KAKAO_BLIND_1차프렌즈4블록_FailFailFail_Review {
 	public static void main(String[] args) {
 		int m = 6;
 		int n = 6;
