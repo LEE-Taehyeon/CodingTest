@@ -35,14 +35,14 @@ public class BinaryTree_Traversal {
 	}
 }
 
-class Node1 {
-	public int data;
+class Node1 {//Node클래스를 선언
+	public int data;//자기자신을 해당하는 노드는 int타입으로
 	public Node1 left;
-	public Node1 right;
+	public Node1 right;//자식노드에 해당하는 노드는 이후 다른 노드와 연결해야하기때문에 Node1타입으로 선언
 }
 
-class Tree {
-	public Node1 root;
+class Tree {//Tree클래스 선언
+	public Node1 root;//root노드를 만들고
 
 	public Node1 getRoot() {
 		return root;
@@ -52,7 +52,7 @@ class Tree {
 		this.root = root;
 	}
 
-	public Node1 makeNode1(Node1 left, int data, Node1 right) {
+	public Node1 makeNode1(Node1 left, int data, Node1 right) {//노드를 연결해준다.
 		Node1 Node1 = new Node1();
 		Node1.data = data;
 		Node1.left = left;
@@ -60,7 +60,7 @@ class Tree {
 		return Node1;
 	}
 
-	public void preOrder(Node1 Node1) {
+	public void preOrder(Node1 Node1) {//전위순회
 		if (Node1 != null) {
 			System.out.print(Node1.data + " ");
 			preOrder(Node1.left);
@@ -68,7 +68,7 @@ class Tree {
 		}
 	}
 
-	public void inOrder(Node1 Node1) {
+	public void inOrder(Node1 Node1) {//중위순회
 		if (Node1 != null) {
 			inOrder(Node1.left);
 			System.out.print(Node1.data + " ");
@@ -76,7 +76,7 @@ class Tree {
 		}
 	}
 
-	public void postOrder(Node1 Node1) {
+	public void postOrder(Node1 Node1) {//후위순회
 		if (Node1 != null) {
 			postOrder(Node1.left);
 			postOrder(Node1.right);
