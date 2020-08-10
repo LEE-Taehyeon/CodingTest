@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 // -- 절반 정도 맞음
-public class TEST06_Lv2_2018_KAKAO_BLIND_3차파일명정렬_V01 {
+public class TEST06_Lv2_2018_KAKAO_BLIND_3차파일명정렬_S01_V01 {
 	public static void main(String[] args) {
 		//String[] files = { "img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG" };
 		String[] files = { "F-5 Freedom Fighter", "B-50 Superfortress", "A-10 Thunderbolt II", "F-14 Tomcat" };

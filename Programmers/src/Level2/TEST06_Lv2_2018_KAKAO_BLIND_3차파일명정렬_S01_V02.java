@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 // -- 절반 정도 맞음 - 틀린이유: 이전 코드에서 foo010bar020.zip 같은 경우 010bar020을 숫자로 인식하였기 때문에. -> 52번재 줄 추가
-public class TEST06_Lv2_2018_KAKAO_BLIND_3차파일명정렬_V02 {
+public class TEST06_Lv2_2018_KAKAO_BLIND_3차파일명정렬_S01_V02 {
 	public static void main(String[] args) {
 		//String[] files = { "img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG" };
 		String[] files = { "F15", "f0014", "FF16", "A0001", "foo010bar020.zip" };

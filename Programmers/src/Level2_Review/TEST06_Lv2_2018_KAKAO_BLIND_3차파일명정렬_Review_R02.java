@@ -3,7 +3,7 @@ package Level2_Review;
 import java.util.Arrays;
 import java.util.Comparator;
 
-//head와 number 구분하기 다른방법
+//프로그래머스(파일명정렬)   -    head와 number 구분하기 다른방법
 public class TEST06_Lv2_2018_KAKAO_BLIND_3차파일명정렬_Review_R02 {
 	public static void main(String[] args) {
 		String[] files = { "img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG" };
