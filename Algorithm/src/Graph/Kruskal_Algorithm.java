@@ -54,7 +54,7 @@ public class Kruskal_Algorithm {
 			if(findParent(arr, list.get(i).getNode1(), list.get(i).getNode2())!=1) {//같은 부모가 아니면 : 사이클을 막기위한 작업
 				//System.out.println("list.get(i).getDistance(): "+list.get(i).getDistance());
 				sum+=list.get(i).getDistance();//거리를 더해주고
-				unionParent(arr, list.get(i).getNode1(), list.get(i).getNode2());//부모를 같게 만들어 준다.
+				unionParentMerge(arr, list.get(i).getNode1(), list.get(i).getNode2());//같은 부모의 idx값을 모두 같게 만들기.
 			}
 		}
 		System.out.println(sum);
@@ -72,6 +72,17 @@ public class Kruskal_Algorithm {
 		
 	}
 
+	private static void unionParentMerge(int[] arr, int node1, int node2) {
+		int before = arr[arr[node1]];
+		int after = arr[arr[node2]];
+		for(int i=0;i<arr.length;i++) {
+			if(arr[i]==before) {
+				arr[i] = after;
+			}
+		}
+	}
+	
+	/*
 	private static void unionParent(int[] arr, int i, int j) {
 		i = getParent(arr, i);
 		j = getParent(arr, j);
@@ -80,8 +91,8 @@ public class Kruskal_Algorithm {
 		}else {
 			arr[i] = j;
 		}
-		
 	}
+	*/
 
 	private static int getParent(int[] arr, int i) {
 		if(arr[i]==i) {
