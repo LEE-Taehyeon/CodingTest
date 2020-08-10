@@ -82,10 +82,10 @@ public class TEST09_2018_KAKAO_BLIND_방금_그곡_FailFailFail {
 		int remain = timeGap % sound_transform.length();
 		StringBuilder sb = new StringBuilder();
 
-		for (int i = 0; i < share; i++) {
+		for (int i = 0; i < share; i++) {//재생시간 / 음의 길이 (몫)만큼 String 더하기
 			sb.append(sound_transform);
 		}
-		for (int i = 0; i < remain; i++) {
+		for (int i = 0; i < remain; i++) {//재생시간 % 음의 길이 (나머지)만큼 잘라서 String 더하기
 			char ch = sound_transform.charAt(i);
 			sb.append(ch);
 		}
