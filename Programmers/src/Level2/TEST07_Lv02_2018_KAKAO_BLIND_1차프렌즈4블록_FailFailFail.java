@@ -1,5 +1,6 @@
 package Level2;
 
+//프로그래머스_프렌즈 4블록
 public class TEST07_Lv02_2018_KAKAO_BLIND_1차프렌즈4블록_FailFailFail {
 	static int[] dx = { 0, 0, 1, 1 };
 	static int[] dy = { 0, 1, 0, 1 };

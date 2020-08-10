@@ -1,6 +1,6 @@
 package Level2;
 
-//참고 풀이
+//프로그래머스_[3차] n진수게임  :  참고 풀이
 public class TEST07_Lv02_2018_KAKAO_BLIND_3차n진수게임_FailFailFail {
 	public static void main(String[] args) {
 		int n = 13;

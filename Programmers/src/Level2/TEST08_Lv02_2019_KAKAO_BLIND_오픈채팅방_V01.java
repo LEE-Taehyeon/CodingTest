@@ -3,6 +3,7 @@ package Level2;
 import java.util.ArrayList;
 import java.util.List;
 
+//프로그래머스_오픈채팅방
 //싹다 실패(시간이 오래걸림) & 시간초과.
 //일단 틀린이유 : 출력할 때 answer의 index를 i로 증가시켰다. & 예제 입력처럼 Leave가 마지막일 경우 올바른 출력을 하지 못함.
 //현재코드 수정해서 테스트 24까지는 해결(시간은 오래걸림) 단, 이후 테스트케이스는 시간초과
