@@ -21,7 +21,7 @@ public class TEST10_2019_카카오개발자_겨울인턴십_튜플_Review {
 	}
 	public static int[] solution(String s) {
         int[] answer = {};
-        StringTokenizer stk = new StringTokenizer(s, "{}");
+        StringTokenizer stk = new StringTokenizer(s, "{}");//{와  }을 기준으로 token생성
         List<String> list = new ArrayList<String>();
         
         while(stk.hasMoreTokens()) {
@@ -32,7 +32,8 @@ public class TEST10_2019_카카오개발자_겨울인턴십_튜플_Review {
         	}
         }
         
-        Collections.sort(list, new Comparator<String>() {
+        Collections.sort(list, new Comparator<String>() {//list원소를 길이에 맞게 오름차순 정렬
+        	//길이가 짧은 token의 원소들이 해당 튜플에서 앞에 위치한다.
 
 			@Override
 			public int compare(String o1, String o2) {
