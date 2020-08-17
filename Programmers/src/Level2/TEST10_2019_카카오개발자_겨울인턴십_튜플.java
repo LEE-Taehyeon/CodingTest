@@ -25,16 +25,16 @@ public class TEST10_2019_카카오개발자_겨울인턴십_튜플 {
         
         for(int i=2;i<s.length()-1;i++) {
         	char ch = s.charAt(i);
-        	if(!Character.isDigit(ch)) {
-        		if(!sb.toString().equals("")) {
-        			if(map.containsKey(sb.toString())) {
+        	if(!Character.isDigit(ch)) {//숫자가 아니면 map에 저장
+        		if(!sb.toString().equals("")) {//이때 StringBuilder가 ""이면 저장하지 않기 위한
+        			if(map.containsKey(sb.toString())) {//원소 저장
             			map.put(sb.toString(), map.get(sb.toString())+1);
             		}else {
             			map.put(sb.toString(), 1);
             		}
             		sb.delete(0, sb.length());
         		}
-        	}else {
+        	}else {//charAt()원소가 숫자이면 StringBuilder에 계속 붙여나가기(해당 원소가 두자리수 이상일 경우)
         		sb.append(ch);
         	}
         }
@@ -43,7 +43,7 @@ public class TEST10_2019_카카오개발자_겨울인턴십_튜플 {
         
         List<String> keySetList = new ArrayList<String>(map.keySet());
         
-        Collections.sort(keySetList, new Comparator<String>() {
+        Collections.sort(keySetList, new Comparator<String>() {//map value값을 기준으로 내림차순 정렬
 
 			@Override
 			public int compare(String o1, String o2) {
@@ -58,6 +58,7 @@ public class TEST10_2019_카카오개발자_겨울인턴십_튜플 {
 			}
 		});
         
+        //map의 key값 배열로 복사
         answer = new int[keySetList.size()];
         for(int i=0;i<answer.length;i++) {
         	answer[i] = Integer.valueOf(keySetList.get(i));
