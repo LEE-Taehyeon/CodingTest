@@ -16,5 +16,12 @@ public class TEST11_Lv02_2020_카카오인턴십_수식최대화_Study {
 		for(String str:signs) {
 			System.out.print(str+" ");
 		}
+		
+		System.out.println();
+		
+		System.out.println(nums.length);
+		System.out.println(signs[0]);
+		System.out.println(signs.length);
+		
 	}
 }
