@@ -25,7 +25,7 @@ public class TEST02_2020_KAKAO_BLIND_자물쇠와열쇠_S01_V02_FailFailFail {
 		n = lock.length;
 		m = key.length;
 		for (int i = 0; i < 4; i++) {
-			if(i!=0) {
+			if(i!=0) {//최초 처음에는 회전안시키기 위함
 				key = keyRotate(key);
 			}
 			
@@ -42,19 +42,21 @@ public class TEST02_2020_KAKAO_BLIND_자물쇠와열쇠_S01_V02_FailFailFail {
 	}
 
 	private static boolean unLock(int[][] keyRotation, int[][] lock, int j, int k) {
-		int[][] lockExpansion = new int[n + (m - 1) * 2][n + (m - 1) * 2];
-
-		for (int x = 0; x < m; x++) {
-			for (int y = 0; y < m; y++) {
-				lockExpansion[x + j][y + k] = keyRotation[x][y];
-			}
-		}
-
+		int[][] lockExpansion = new int[n + (m - 1) * 2][n + (m - 1) * 2];//lock배열 확장
+		
 		for (int x = m - 1; x < m + n - 1; x++) {
 			for (int y = m - 1; y < m + n - 1; y++) {
-				lockExpansion[x][y] += lock[x - (m - 1)][y - (m - 1)];
+				lockExpansion[x][y] = lock[x - (m - 1)][y - (m - 1)];//확장된 lock배열 가운데 lock배열 대입
 			}
 		}
+		
+		for (int x = 0; x < m; x++) {
+			for (int y = 0; y < m; y++) {
+				lockExpansion[x + j][y + k] += keyRotation[x][y];//key배열을 해당 시작위치에서부터 확장된 lock배열과 합
+			}
+		}
+
+		
 
 		/*
 		for (int i = 0; i < lockExpansion.length; i++) {
@@ -68,16 +70,16 @@ public class TEST02_2020_KAKAO_BLIND_자물쇠와열쇠_S01_V02_FailFailFail {
 		
 		for (int x = m - 1; x < m + n - 1; x++) {
 			for (int y = m - 1; y < m + n - 1; y++) {
-				if (lockExpansion[x][y] != 1) {
+				if (lockExpansion[x][y] != 1) {//확장된 lock배열의 가운데 lock배열이 위치한 모든원소 중 하나라도 1이 아니면 false리턴
 					return false;
 				}
 			}
 		}
 
-		return true;
+		return true;//모든 원소가 1이면 true리턴
 	}
 
-	private static int[][] keyRotate(int[][] key) {
+	private static int[][] keyRotate(int[][] key) {//key배열 시계방향으로 90도 회전
 		int m = key.length;
 		int[][] temp = new int[m][m];
 
