@@ -1,7 +1,7 @@
 package Search;
 
-//이분탐색 알고리즘
-public class Binary_Search_Algorithm {
+//이분탐색 알고리즘 - 반복문 이용
+public class Binary_Search_Algorithm_V01 {
 	public static void main(String[] args) {
 		int[] arr = { 2, 8, 10, 16, 35, 44, 62, 68, 71, 78, 92, 95, 99, 100 };
 		int num = 92;
@@ -17,19 +17,17 @@ public class Binary_Search_Algorithm {
 			int mid = (max + min) / 2;
 			System.out.println(arr[mid]);
 			
-			if(arr[mid]>=num) {
-				max = mid;
-			}else {
+			if(arr[mid]>num) {
+				max = mid-1;
+			}else if(arr[mid]<num) {
 				min = mid + 1;
+			}else {
+				return min;
 			}
-			//System.out.println("S");
 		}
 		
-		if(arr[min]==num) {
-			return min;
-		}else {
-			return -1;//해당 숫자가 없는 경우
-		}
+		return -1;//해당 숫자가 없는 경우
+
 	}
 
 }
