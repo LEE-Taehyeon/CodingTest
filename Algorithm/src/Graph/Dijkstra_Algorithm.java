@@ -20,7 +20,7 @@ public class Dijkstra_Algorithm {
 		
 		
 		num = arr.length;
-		dijkstra(0);
+		dijkstra(0);//1번 노드(index:0)에서 시작하여 각 노드로 가는 최단경로 찾기
 		
 		for(int i:distance) {
 			System.out.print(i+" ");
@@ -29,11 +29,11 @@ public class Dijkstra_Algorithm {
 	}
 	
 	private static void dijkstra(int start) {
-		for(int i=0;i<num;i++) {
+		for(int i=0;i<num;i++) {//최초 arr의 값을 distance에 넣어준다
 			distance[i] = arr[start][i];
 		}
 		
-		visit[start] = true;
+		visit[start] = true;//시작하는 노드를 true로 갱신
 		
 		for(int i=0;i<num;i++) {
 			int current = getSmallIndex();
@@ -41,7 +41,8 @@ public class Dijkstra_Algorithm {
 			
 			for(int j=0;j<num;j++) {
 				if(!visit[j]) {
-					if(distance[current] + arr[current][j] < distance[j]) {
+					if(distance[current] + arr[current][j] < distance[j]) {//distance[current] : 시작노드(1번노드)에서 current노드로 가는 direct비용
+																		   //arr[current][j] : current노드에서 j노드로 가는 direct비용
 						distance[j] = distance[current] + arr[current][j];
 					}
 				}
