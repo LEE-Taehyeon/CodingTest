@@ -25,7 +25,7 @@ public class Dijkstra_Algorithm_PriorityQueue {
 		
 		num = arr.length;
 		
-		for(int i=0;i<num;i++) {
+		for(int i=0;i<num;i++) {//우선 distance배열에 모두 최댓값을 삽입
 			distance[i] = max;
 		}
 		
@@ -40,7 +40,7 @@ public class Dijkstra_Algorithm_PriorityQueue {
 
 	public static void dijkstra(int start) {
 		PriorityQueue<Node3> pq = new PriorityQueue<Node3>();
-		distance[start] = 0;
+		distance[start] = 0;//자기자신으로 가는 비용으 0
 		pq.offer(new Node3(start, 0));
 		
 		while(!pq.isEmpty()) {
@@ -54,7 +54,8 @@ public class Dijkstra_Algorithm_PriorityQueue {
 			}
 			
 			for(int i=0;i<arr.length;i++) {
-				if(arr[current][i]!=0 && distance[i] > distance[current] + arr[current][i]) {//distance[i] : 한 번에 갈 때의 비용
+				if(arr[current][i]!=0 && distance[i] > distance[current] + arr[current][i]) {//distance[current] : 시작노드(1번노드)에서 current노드로 가는 direct비용
+																							 //arr[current][j] : current노드에서 j노드로 가는 direct비용
 					distance[i] = distance[current] + arr[current][i];
 					pq.offer(new Node3(i, distance[i]));
 				}
@@ -80,7 +81,7 @@ class Node3 implements Comparable<Node3>{
 	
 	@Override
 	public int compareTo(Node3 o) {//Node3으로 우선순위 큐를 만들었기 때문에 compareTo메소드를 재정의 해야한다.++
-		return this.distance - o.distance;
+		return this.distance - o.distance;//오름차순으로 정렬
 	}
 	
 }
